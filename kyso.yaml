@@ -1,0 +1,8 @@
+title: "Testing out different engines and languages"
+description: "Tables, Julia, bash"
+main: "sample_doc.md"
+tags:
+  - test
+  - julia
+  - bash
+  - tables
