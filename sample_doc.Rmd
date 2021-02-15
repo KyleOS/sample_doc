@@ -1,0 +1,76 @@
+---
+title: "Example RMarkdown"
+author: "Octavio Medina"
+date: "2/15/2021"
+output: 
+  html_document:
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(JuliaCall)
+julia_setup("/Applications/Julia-1.5.app/Contents/Resources/julia/bin")
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Julia
+
+This is some Julia with `JuliaCall`:
+
+```{julia}
+a = sqrt(2)  # the semicolon inhibits printing
+
+println("Hello Julia world!")
+
+```
+
+## Shell (bash)
+
+Try out some shell script.
+
+```{bash}
+
+ls
+
+```
+
+
+## Table rendering
+
+Some table rendering with `modelsummary` and `huxtable`. These don't show up great when rendering as .md because they generate html objects.
+
+```{r}
+library(modelsummary)
+
+mod1 <- lm(Sepal.Length ~ Sepal.Width, data = iris)
+
+modelsummary(mod1)
+
+```
+
+```{r}
+library(huxtable)
+
+huxreg(mod1)
+
+```
