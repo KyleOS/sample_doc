@@ -1,5 +1,5 @@
 ---
-title: "Example RMarkdown"
+title: "Sample RMarkdown for Julia, Bash, etc."
 author: "Octavio Medina"
 date: "2/15/2021"
 output: 
@@ -62,7 +62,7 @@ println("Hello Julia world!")
 
 ## Shell (bash)
 
-Try out some shell script.
+And this is some shell script.
 
 
 ```bash
@@ -72,11 +72,13 @@ ls
 ```
 
 ```
+## pandoc.html
 ## sample_doc.Rmd
 ## sample_doc.html
 ## sample_doc.md
 ## sample_doc_files
-## test1.html
+## sample_julia.jmd
+## sample_julia.md
 ```
 
 
